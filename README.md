@@ -1,43 +1,40 @@
 # Lux AI Season 3 Python Kit
 
-Este é o repositório para o kit Python. Certifique-se de ler as instruções, pois elas são importantes para entender como escrever um bot e enviá-lo para a competição. Para saber quais pacotes Python estão disponíveis no servidor da competição, veja [este link](https://github.com/Lux-AI-Challenge/Lux-Design-S2/tree/main/kits/available_packages.txt).
+This is the folder for the Python kit. Please make sure to read the instructions as they are important regarding how you will write a bot and submit it to the competition. For those who need to know what python packages are available on the competition server, see [this](https://github.com/Lux-AI-Challenge/Lux-Design-S2/tree/main/kits/available_packages.txt)
 
-Acompanhe nosso [Discord](https://discord.gg/aWJt3UAcgn) para anúncios importantes, incluindo alterações críticas, ou acesse os [fóruns do Kaggle](https://www.kaggle.com/c/lux-ai-season-3/discussion).
+Make sure to check our [Discord](https://discord.gg/aWJt3UAcgn) for announcements if there are any breaking changes.
+ or the [Kaggle forums](https://www.kaggle.com/c/lux-ai-season-3/discussion) 
+## Requirements
 
-## Requisitos
+You will need Python 3.9 or higher and NumPy installed (which should come with the dependencies you installed for the environment). To install the environment run
 
-Você precisará de **Python 3.9** ou superior e **NumPy** instalado (que deve vir junto com as dependências instaladas para o ambiente). Para instalar o ambiente, execute:
-
-```bash
+```
 pip install --upgrade luxai-s3
 ```
 
-## Começando
+## Getting Started
 
-Seu código principal do agente será colocado no arquivo `agent.py`, e você pode criar e usar mais arquivos auxiliares. Deixe o arquivo `main.py` intacto, pois ele habilita seu agente para competir contra outros agentes localmente e no Kaggle.
+To get started, download this folder from this repository.
 
-Para executar rapidamente seu agente, use:
+Your core agent code will go into `agent.py`, and you can create and use more files to help you as well. You should leave `main.py` alone as that code enables your agent to compete against other agents locally and on Kaggle.
 
-```bash
+To quickly test run your agent, run
+
+```
 luxai-s3 main.py main.py --output=replay.html
 ```
 
-Isso executará o código do `agent.py` na mesma pasta que o `main.py` e gerará um arquivo de replay salvo como `replay.html`, que pode ser aberto e assistido.
+This will run the `agent.py` code in the same folder as `main.py` and generate a replay file saved to `replay.html` that you can open and watch.
 
-## Desenvolvimento
+## Developing
+Now that you have the code up and running, you are ready to start programming and having some fun!
 
-Agora que o código está configurado e funcionando, você está pronto para começar a programar e se divertir!
+If you haven't read it already, take a look at the [design specifications for the competition](../../docs/specs.md). This will go through the rules and objectives of the competition. 
 
-Tutorial detalhado em um notebook Jupyter tanto [localmente](https://github.com/Lux-AI-Challenge/Lux-Design-S2/blob/main/kits/python/lux-ai-challenge-season-2-tutorial-python.ipynb) quanto no [Kaggle](https://www.kaggle.com/code/stonet2000/lux-ai-challenge-season-2-tutorial-python).
+<!-- For a in-depth tutorial, we provide a jupyter notebook both [locally](https://github.com/Lux-AI-Challenge/Lux-Design-S2/blob/main/kits/python/lux-ai-challenge-season-2-tutorial-python.ipynb) and on [Kaggle](https://www.kaggle.com/code/stonet2000/lux-ai-challenge-season-2-tutorial-python) -->
 
-Todos os kits seguem uma API comum, que você pode usar para acessar várias funções e propriedades úteis no desenvolvimento da sua estratégia e bot. Veja a versão markdown aqui: [README do Kit](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/main/kits/README.md), que também descreve a estrutura de observação e ação.
+All of our kits follow a common API through which you can use to access various functions and properties that will help you develop your strategy and bot. The markdown version is here: https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/main/kits/README.md, which also describes the observation and action structure/spaces.
 
-## Envio para o Kaggle
+## Submitting to Kaggle
 
-Os envios precisam ser um arquivo .tar.gz com o main.py no diretório principal (não aninhado). Para criar um envio, use o comando:
-
-```bash
-tar -czvf submission.tar.gz *
-```
-
-O arquivo deve ser enviado na aba "Minhas Submissões" do Kaiki bonitão, e pronto! A submissão começará com um jogo agendado contra ela mesma para garantir que tudo está funcionando antes de entrar no pool de partidas com o restante da leaderboard.
+Submissions need to be a .tar.gz bundle with main.py at the top level directory (not nested). To create a submission, create the .tar.gz with `tar -czvf submission.tar.gz *`. Upload this under the [My Submissions tab](https://www.kaggle.com/competitions/lux-ai-season-3/submissions) and you should be good to go! Your submission will start with a scheduled game vs itself to ensure everything is working before being entered into the matchmaking pool against the rest of the leaderboard.
